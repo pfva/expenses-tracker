@@ -20,5 +20,15 @@
   font: inherit;
   padding: 0.5rem 3rem;
   font-weight: bold;
-  border-radius: 6px;
+  cursor: pointer;
+  background-color: #af04ff;
+  border: 1px solid #af04ff;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.expenses-filter select:hover,
+.expenses-filter select:active {
+  background-color: #7809ac;
+  border: 1px solid #7809ac;
 }

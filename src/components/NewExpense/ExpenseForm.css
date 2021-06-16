@@ -2,8 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin: auto;
+  margin-bottom: 2rem;
   text-align: left;
+  color: #fff;
+  width: 50rem;
+  max-width: 95%;
 }
 
 .new-expense__control label {
@@ -15,12 +19,21 @@
 .new-expense__control input {
   font: inherit;
   padding: 0.5rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
-  width: 20rem;
+  width: 16rem;
   max-width: 100%;
 }
 
 .new-expense__actions {
   text-align: right;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.new-expense__heading {
+  font-size: 1.25rem;
+  flex: 1;
+  margin: 2rem 1rem;
+  color: white;
 }

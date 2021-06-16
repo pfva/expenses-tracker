@@ -1,4 +1,5 @@
 import ChartBar from './ChartBar';
+import Card from '../UI/Card';
 import './Chart.css';
 
 const Chart = props => {
@@ -6,7 +7,7 @@ const Chart = props => {
   const totalMaximum = Math.max(...dataPointValues);
 
   return (
-    <div className="chart">
+    <Card className="chart">
       {props.dataPoints.map(dataPoint => (
         <ChartBar
           key={dataPoint.label}
@@ -15,7 +16,7 @@ const Chart = props => {
           label={dataPoint.label}
         />
       ))}
-    </div>
+    </Card>
   );
 };
 

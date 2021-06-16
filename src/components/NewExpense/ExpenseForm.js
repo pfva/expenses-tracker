@@ -82,7 +82,10 @@ const ExpenseForm = props => {
       </div>
     </form>
   ) : (
-    <button onClick={showFormHandler}>Add New Expense</button>
+    <>
+      <h2 className="new-expense__heading">Add your expenses to visualize your spending on a monthly basis</h2>
+      <button onClick={showFormHandler}>Add New Expense</button>
+    </>
   );
 };
 
