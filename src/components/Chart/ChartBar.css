@@ -8,6 +8,7 @@
 .chart-bar__inner {
   height: 100%;
   width: 100%;
+  min-width: 1rem;
   border: 1px solid #b7bfc9;
   border-radius: 2px;
   background-color: #fff;

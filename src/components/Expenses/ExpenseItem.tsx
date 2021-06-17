@@ -1,8 +1,13 @@
+import { ExpenseDataInputType } from '../../types/commonTypes';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
 
-function ExpenseItem(props) {
+type ExpenseItemProps = ExpenseDataInputType & {
+  key: string
+}
+
+function ExpenseItem(props: ExpenseItemProps) {
   return (
     <li>
       <Card className="expense-item">

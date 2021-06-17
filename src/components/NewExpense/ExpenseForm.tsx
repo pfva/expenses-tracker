@@ -24,10 +24,10 @@ const ExpenseForm = (props: ExpenseFormProps) => {
     setEnteredDate(event.target.value);
   };
 
-  const submitHandler = (event: React.SyntheticEvent) => {
+  const submitHandler = (event: React.SyntheticEvent): void => {
     event.preventDefault();
 
-    const expenseData = {
+    const expenseData: ExpenseDataInputType = {
       title: enteredTitle,
       amount: +enteredAmount,
       date: new Date(enteredDate),
@@ -41,11 +41,11 @@ const ExpenseForm = (props: ExpenseFormProps) => {
     hideFormHandler();
   };
 
-  const showFormHandler = () => {
+  const showFormHandler = (): void => {
     setShowForm(true);
   };
 
-  const hideFormHandler = () => {
+  const hideFormHandler = (): void => {
     setShowForm(false);
   };
 

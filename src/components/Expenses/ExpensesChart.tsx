@@ -1,7 +1,18 @@
+import { ExpenseDataType } from '../../types/commonTypes';
+import { Month } from '../../types/commonTypes';
 import Chart from '../Chart/Chart';
 
-const ExpensesChart = props => {
-  const chartDataPoints = [
+type ChartDataPoints = {
+  label: Month
+  value: number
+}
+
+type ExpensesChartProps = {
+  expenses: ExpenseDataType[]
+}
+
+const ExpensesChart = (props: ExpensesChartProps) => {
+  const chartDataPoints: ChartDataPoints[] = [
     { label: 'Jan', value: 0 },
     { label: 'Feb', value: 0 },
     { label: 'Mar', value: 0 },
@@ -17,7 +28,7 @@ const ExpensesChart = props => {
   ];
 
   for (const expense of props.expenses) {
-    const expenseMonth = expense.date.getMonth();
+    const expenseMonth: number = expense.date.getMonth();
     chartDataPoints[expenseMonth].value += expense.amount;
   }
 
