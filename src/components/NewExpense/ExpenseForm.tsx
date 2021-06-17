@@ -1,25 +1,30 @@
 import { useState } from 'react';
+import { ExpenseDataInputType } from '../../types/commonTypes';
 import './ExpenseForm.css';
 
-const ExpenseForm = props => {
+type ExpenseFormProps = {
+  onSaveExpenseData: (expenseData: ExpenseDataInputType) => void;
+}
+
+const ExpenseForm = (props: ExpenseFormProps) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
   const [showForm, setShowForm] = useState(false);
 
-  const titleChangeHandler = event => {
+  const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setEnteredTitle(event.target.value);
   };
 
-  const amountChangeHandler = event => {
+  const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setEnteredAmount(event.target.value);
   };
 
-  const dateChangeHandler = event => {
+  const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setEnteredDate(event.target.value);
   };
 
-  const submitHandler = event => {
+  const submitHandler = (event: React.SyntheticEvent) => {
     event.preventDefault();
 
     const expenseData = {

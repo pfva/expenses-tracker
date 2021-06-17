@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { ExpenseDataType } from './types/commonTypes';
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
-const INITIAL_EXPENSES = [
+const INITIAL_EXPENSES: ExpenseDataType[] = [
   {
     id: 'e1',
     title: 'Toilet Paper',
@@ -27,7 +28,7 @@ const INITIAL_EXPENSES = [
 function App() {
   const [expenses, setExpenses] = useState(INITIAL_EXPENSES);
 
-  const addExpenseHandler = expense => {
+  const addExpenseHandler = (expense: ExpenseDataType): void => {
     setExpenses(prevExpenses => [expense, ...prevExpenses]);
   };
 

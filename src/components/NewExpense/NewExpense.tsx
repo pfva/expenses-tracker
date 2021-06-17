@@ -1,9 +1,14 @@
+import { ExpenseDataInputType, ExpenseDataType } from '../../types/commonTypes';
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 
-const NewExpense = props => {
-  const saveExpenseDataHandler = enteredExpenseData => {
-    const expenseData = {
+type NewExpenseProps = {
+  onAddExpense: (expenseData: ExpenseDataType) => void;
+}
+
+const NewExpense = (props: NewExpenseProps) => {
+  const saveExpenseDataHandler = (enteredExpenseData: ExpenseDataInputType) => {
+    const expenseData: ExpenseDataType = {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
