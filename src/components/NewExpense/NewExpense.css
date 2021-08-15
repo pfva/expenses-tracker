@@ -25,3 +25,15 @@
   transform: translateY(2px);
   box-shadow: 0 6px 0 -4px #b7bfc9;
 }
+
+@media (max-width: 940px) {
+  .new-expense {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .new-expense {
+    height: 26rem;
+  }
+}
